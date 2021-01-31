@@ -1,0 +1,42 @@
+project (assignment4) {
+  exename = assignment4
+  install = .
+ 
+  specific (make, gnuace) {
+    compile_flags += -std=c++11
+  }
+
+  Source_Files {
+    Add_Node.cpp
+    BinaryExpr_Node.cpp
+    Divide_Node.cpp
+    Empty_Exception.cpp
+    Expr_Node.cpp
+    Expr_Tree_Build.cpp
+    Expr_Tree.cpp
+    Modulus_Node.cpp
+    Multiplication_Node.cpp
+    Number_Node.cpp
+    Subtract_Node.cpp
+    Visitor_PostOrder.cpp
+    Calculator.cpp
+    Main.cpp
+  }
+
+  Header_Files {
+    Expr_Builder.h
+    Visitor.h
+  }
+
+  Template_Files {
+    Array_Base.cpp
+    Array.cpp
+    Queue.cpp
+    Stack.cpp
+  }
+
+  Inline_Files {
+    Stack.inl
+    Queue.inl
+  }
+}
