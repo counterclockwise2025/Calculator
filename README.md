@@ -1,6 +1,3 @@
-# Calculator
-Calculator project leading up to the final creation of two calculators that implement higher level design pattern strategies that I learned through my software design patterns course.
-
 # Hello everyone
 
 This is a project that I worked on during my software design patterns class. The project was pretty lengthy and time consuming but I have uploaded the work. I have organized the work in a manner to guive an idea of the flow. 
