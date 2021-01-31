@@ -1,0 +1,99 @@
+==193033== Memcheck, a memory error detector
+==193033== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==193033== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==193033== Command: ./assignment3
+==193033== Parent PID: 192186
+==193033== 
+==193033== 
+==193033== Process terminating with default action of signal 6 (SIGABRT)
+==193033==    at 0x5CB4387: raise (in /usr/lib64/libc-2.17.so)
+==193033==    by 0x5CB5A77: abort (in /usr/lib64/libc-2.17.so)
+==193033==    by 0x54BF7D4: __gnu_cxx::__verbose_terminate_handler() (in /usr/lib64/libstdc++.so.6.0.19)
+==193033==    by 0x54BD745: ??? (in /usr/lib64/libstdc++.so.6.0.19)
+==193033==    by 0x54BD772: std::terminate() (in /usr/lib64/libstdc++.so.6.0.19)
+==193033==    by 0x54BD992: __cxa_throw (in /usr/lib64/libstdc++.so.6.0.19)
+==193033==    by 0x55126F6: std::__throw_invalid_argument(char const*) (in /usr/lib64/libstdc++.so.6.0.19)
+==193033==    by 0x403F16: int __gnu_cxx::__stoa<long, int, char, int>(long (*)(char const*, char**, int), char const*, char const*, unsigned long*, int) (in /home/svaidh/CSCI36300/A3/assignment3)
+==193033==    by 0x403065: Infix_To_Postfix::in_to_post_conversion(std::string) (in /home/svaidh/CSCI36300/A3/assignment3)
+==193033==    by 0x402048: main (in /home/svaidh/CSCI36300/A3/assignment3)
+==193033== 
+==193033== FILE DESCRIPTORS: 4 open at exit.
+==193033== Open file descriptor 3: /home/svaidh/CSCI36300/A3/Valgrind_Report
+==193033==    <inherited from parent>
+==193033== 
+==193033== Open file descriptor 2: /dev/pts/4
+==193033==    <inherited from parent>
+==193033== 
+==193033== Open file descriptor 1: /dev/pts/4
+==193033==    <inherited from parent>
+==193033== 
+==193033== Open file descriptor 0: /dev/pts/4
+==193033==    <inherited from parent>
+==193033== 
+==193033== 
+==193033== HEAP SUMMARY:
+==193033==     in use at exit: 267 bytes in 6 blocks
+==193033==   total heap usage: 10 allocs, 4 frees, 381 bytes allocated
+==193033== 
+==193033== 5 bytes in 1 blocks are still reachable in loss record 1 of 6
+==193033==    at 0x4C2AC38: operator new[](unsigned long) (vg_replace_malloc.c:433)
+==193033==    by 0x404205: Array<char>::Array(unsigned long) (in /home/svaidh/CSCI36300/A3/assignment3)
+==193033==    by 0x404225: Stack<char>::Stack() (in /home/svaidh/CSCI36300/A3/assignment3)
+==193033==    by 0x402FE8: Infix_To_Postfix::in_to_post_conversion(std::string) (in /home/svaidh/CSCI36300/A3/assignment3)
+==193033==    by 0x402048: main (in /home/svaidh/CSCI36300/A3/assignment3)
+==193033== 
+==193033== 26 bytes in 1 blocks are still reachable in loss record 2 of 6
+==193033==    at 0x4C2A593: operator new(unsigned long) (vg_replace_malloc.c:344)
+==193033==    by 0x551CA18: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.19)
+==193033==    by 0x551D62A: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib64/libstdc++.so.6.0.19)
+==193033==    by 0x551D6D3: std::string::reserve(unsigned long) (in /usr/lib64/libstdc++.so.6.0.19)
+==193033==    by 0x551D93E: std::string::append(char const*, unsigned long) (in /usr/lib64/libstdc++.so.6.0.19)
+==193033==    by 0x54D52E1: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (in /usr/lib64/libstdc++.so.6.0.19)
+==193033==    by 0x403042: Infix_To_Postfix::in_to_post_conversion(std::string) (in /home/svaidh/CSCI36300/A3/assignment3)
+==193033==    by 0x402048: main (in /home/svaidh/CSCI36300/A3/assignment3)
+==193033== 
+==193033== 29 bytes in 1 blocks are still reachable in loss record 3 of 6
+==193033==    at 0x4C2A593: operator new(unsigned long) (vg_replace_malloc.c:344)
+==193033==    by 0x551CA18: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.19)
+==193033==    by 0x551E2A0: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib64/libstdc++.so.6.0.19)
+==193033==    by 0x551E6D7: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.19)
+==193033==    by 0x55126C2: std::__throw_invalid_argument(char const*) (in /usr/lib64/libstdc++.so.6.0.19)
+==193033==    by 0x403F16: int __gnu_cxx::__stoa<long, int, char, int>(long (*)(char const*, char**, int), char const*, char const*, unsigned long*, int) (in /home/svaidh/CSCI36300/A3/assignment3)
+==193033==    by 0x403065: Infix_To_Postfix::in_to_post_conversion(std::string) (in /home/svaidh/CSCI36300/A3/assignment3)
+==193033==    by 0x402048: main (in /home/svaidh/CSCI36300/A3/assignment3)
+==193033== 
+==193033== 30 bytes in 1 blocks are still reachable in loss record 4 of 6
+==193033==    at 0x4C2A593: operator new(unsigned long) (vg_replace_malloc.c:344)
+==193033==    by 0x551CA18: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.19)
+==193033==    by 0x551E2A0: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib64/libstdc++.so.6.0.19)
+==193033==    by 0x551E35C: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, unsigned long, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.19)
+==193033==    by 0x402F01: Infix_To_Postfix::in_to_post_conversion(std::string) (in /home/svaidh/CSCI36300/A3/assignment3)
+==193033==    by 0x402048: main (in /home/svaidh/CSCI36300/A3/assignment3)
+==193033== 
+==193033== 33 bytes in 1 blocks are still reachable in loss record 5 of 6
+==193033==    at 0x4C2A593: operator new(unsigned long) (vg_replace_malloc.c:344)
+==193033==    by 0x551CA18: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.19)
+==193033==    by 0x551D62A: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib64/libstdc++.so.6.0.19)
+==193033==    by 0x551D6D3: std::string::reserve(unsigned long) (in /usr/lib64/libstdc++.so.6.0.19)
+==193033==    by 0x54D56EE: std::basic_istream<char, std::char_traits<char> >& std::getline<char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&, char) (in /usr/lib64/libstdc++.so.6.0.19)
+==193033==    by 0x401FA4: main (in /home/svaidh/CSCI36300/A3/assignment3)
+==193033== 
+==193033== 144 bytes in 1 blocks are possibly lost in loss record 6 of 6
+==193033==    at 0x4C29F73: malloc (vg_replace_malloc.c:309)
+==193033==    by 0x54BC2E2: __cxa_allocate_exception (in /usr/lib64/libstdc++.so.6.0.19)
+==193033==    by 0x55126A2: std::__throw_invalid_argument(char const*) (in /usr/lib64/libstdc++.so.6.0.19)
+==193033==    by 0x403F16: int __gnu_cxx::__stoa<long, int, char, int>(long (*)(char const*, char**, int), char const*, char const*, unsigned long*, int) (in /home/svaidh/CSCI36300/A3/assignment3)
+==193033==    by 0x403065: Infix_To_Postfix::in_to_post_conversion(std::string) (in /home/svaidh/CSCI36300/A3/assignment3)
+==193033==    by 0x402048: main (in /home/svaidh/CSCI36300/A3/assignment3)
+==193033== 
+==193033== LEAK SUMMARY:
+==193033==    definitely lost: 0 bytes in 0 blocks
+==193033==    indirectly lost: 0 bytes in 0 blocks
+==193033==      possibly lost: 144 bytes in 1 blocks
+==193033==    still reachable: 123 bytes in 5 blocks
+==193033==                       of which reachable via heuristic:
+==193033==                         stdstring          : 118 bytes in 4 blocks
+==193033==         suppressed: 0 bytes in 0 blocks
+==193033== 
+==193033== For lists of detected and suppressed errors, rerun with: -s
+==193033== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
